@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reactjs Interview</title>
+</head>
+
+<body>
+    <h1>React js</h1>
+    <p>React es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de
+        facilitar el desarrollo de aplicaciones en una sola página. Es mantenido por Facebook y la comunidad de software
+        libre. Está basado en un paradigma llamado programación orientada a componentes en el que cada componente es una
+        pieza con la que el usuario puede interactuar.</p>
+    <h3>Virtual Dom</h3>
+    <p>
+        El Virtual Dom toma una parte de la memoria que actúa como intermediario entre la aplicación y el DOM que ve el
+        usuario, posteriormente los compara cuando se produzca algun cambio y renderear lo menos posible lo que se
+        traduce en reducir los costes de rendimiento en el momento de hacer un render. La particularidad de React es que
+        traslada los cambios de forma masiva y nos abstrae de todo el proceso de actualizar atributos o variables ya que
+        todo esto sucede a nivel interno
+    </p>
+    <h3>Hooks</h3>
+    <p>
+        Los hooks son una api de la libreria de react que nos permite tener estado y otras caracteristicas, en los
+        componentes creados con una funcion.
+        Te permiten “enganchar” el estado de React y el ciclo de vida desde componentes de función. Los hooks no
+        funcionan dentro de las clases y te permiten usar React sin clases. useEffect y useContext
+    </p>
+    <h3>Diferencia class component</h3>
+    <p>
+        Partiendo de que un componente es un bloque o codigo que se podria reutilizar en todo el proyecto existen
+        dos tipos de componentes de clase y funcionales. La principal diferencia es los componentes de clases
+        poseen estado y ciclo de vida y permite cambiar el comportamiento de los componentes mientras que los funcionales
+        son mas simples y no tienen estados lo que ayuda a reducir el codigo.
+    </p>
+    <h3>Que es server side rendering</h3>
+    <p>
+        Server side rendering es algo muy potente ya que permite renderear la pagina la primera vez con el html/js necesario,
+        y en el lado del cliente no hay q volver a cargar todo otra vez sino hacer llamadas AJAX para pedir los datos q hagan
+        falta.
+    </p>
+    <h3>Ciclo de vida de los componentes</h3>
+    <p>
+        React posee tres ciclos de vida
+        <ul>
+            <li>Montaje, cuando se crea una instancia del componente y se inserta en el DOM </li>
+            <li>Actualizacion, cuanod sufre algun cambio las props o el state del componente</li>
+            <li>Desmontaje, cuando el componente se elimina del DOM</li>
+        </ul>
+    </p>
+    <h3>Diferencia entre elemento y componente</h3>
+    <p>
+        El componente es todo un header un footer un create etc y el elemento seria algo especifico que necesitas que tenga tu componente
+        una funcion con un modal por ejemplo
+    </p>
+    <h3>Como funciona redux</h3>
+    <p>
+        Redux no tiene nada q ver con react se puede usar en angular jquery vanilla js etc partiendo de esto redux funciona
+        bien con librerias como react pq t permite describir la interfaz de usuario como una funcion de estado y emitir actualizaciones
+        en respuesta de acciones.
+        En resumen controlar los estados mediante acciones. Ademas esta pensada para controlar el flujo de datos de una aplicacion
+    </p>
+    <h3>Que es JSX</h3>
+    <p>
+        Es una extension de JS creada por Facebook para el uso con su libreria React sirviendo de preprocesador y transformando el codigo a JS
+        Basicamente convierte el codigo de react en JS para q pueda ser leido por los navegadores. 
+    </p>
+    <h3>Funcionamiento de cada hook en particular(teoria)</h3>
+    <p>
+        useState se usa para añadir o devolver un estado de react a un componente en funcion, permite conservar la variable cuando se sale 
+        de la funcion declara la variable
+        setState realiza modificacion de estado
+        useEffect actualiza la variable usando la api del navegador
+        useContext se usa por el useState si en la app hay q acceder a muchos componentes anidados
+        useReducer cuando la app tiene logica compleja usereducer sustituye a useState ya q permite actualizaciones profundas
+        y el proximo estado depende del anterior
+        usecallback se usa para evitar renders innecesarios 
+        useMemo solo devuelve el calculo del valor cuando este cambie
+        useRef devuelve un objeto ref q se pueda mantener en una variable mutable con la propiedad current
+        useImpertaiveHandle personaliza los valores de instancia q usan los componentes padres con ref
+        uselayouteffect igual q useeffect pero se dispara de forma sincrona se carga todo al mismo tiempo
+        usedebugvalue puede usarse para mostrar una etiqueta para Hooks personalizados en React DevTools
+        limitantes no se pueden llamar dentro de condicionales o ciclos y solo puedes mandarlos a llamar desde el cuerpo de la funcion
+
+    </p>
+    <h3>High order components</h3>
+    <p>
+        un componente de orden superior es una función que recibe un componente y devuelve un nuevo componente
+    </p>
+    <h3>Cuando usar redux y cuando context</h3>
+    <p>
+        aplicaciones pequeñas context aplicaciones empresariales o mas complejas redux
+    </p>
+    <h3>Diferencia context API vs Redux</h3>
+    <p>
+        Depende del proyecto q se vaya a usar si es un proyecto muy grande pues se usa redux y q tiene mi en cambio
+        si no vas a usar un middleware, si necesitas datos globales o si quieres gestionar estados desde cualquier componente o
+        vas usar aplicaciones pequeñas usas context api
+    </p>
+    <h2>Javascript</h2>
+    <h3>Scope</h3>
+    <p>
+        Es una extension de chrome q permite q valores tienen las variables las props almacenadas entre otras herramientas 
+        muy utiles
+    </p>
+    <h3>Design Patterns</h3>
+    <p>
+        Render props es un patron de diseño que permite manejar peticiones asincronas y reducir codigo y mejorar rendimiento
+        Patron composer en la composicion de componentes permite añadir cambios sin afectar todo el codigo y reutilizarlos
+        Patron abstract react trata de evitar q se le añadan mas funcionalidades q sean implementadas por el usuario con 
+        algunas excepciones
+        Patron dogfooding se trata de resolver la mayor cantidad de problemas y darle solucion a la comunidad
+        Optimizado para instrumentacion ponerle nombres detallados a todas las funcionalidades
+        Implementacion poner codigo feo en vez de elegante pero perfectamente funcional con buen rendimiento y q permita buena exp
+        de desarrollo
+        Interoperabilidad permite trabajar con otras bibliotecas y lenguajes 
+        Estabilidad react no es reaccio al cambio pero cuando se cambie algo se debe tener la ruta clara
+        React es pragmatico o sea esta enfocado en la practica o la ejecucion de acciones y para ello tiene su guia en facebook  
+    </p>
+    <h3>Async await</h3>
+    <p>
+        async son funciones y await son expresiones que pausa la ejecucion de dicha funcion asincrona para esperar el resultado
+        de la promesa q le pases a la expresion await y si esta bien o mal reanuda la funcion async y devuelve el resultado 
+    </p>
+    <h3>Closures</h3>
+    <p>
+        Es cuando queramos modificiar un valor externo a nuestra funcion o metodo
+    </p>
+    <h3>Arrow function</h3>
+    <p>
+        es una expresion usada como aternativa y para simpificar e trabajo de la funciones tradicionales es limitada y 
+        no se puede utilizar en todas las situaciones por ej en constructores
+    </p>
+    <h3>Css(Flexbox, Grid)</h3>
+    <p>
+        Son estilos o pautas de css y cada uno se puede usar segun el proyecto q tengas flex ayuda a posicionar y alinear elementos
+        y grid sirve para un diseño completo q requiera una organizacion de las paginas
+    </p>
+</body>
+
+</html>
